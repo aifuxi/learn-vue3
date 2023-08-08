@@ -4,6 +4,7 @@ import LearnComputed from "./components/LearnComputed.vue";
 import LearnReactive from "./components/LearnReactive.vue";
 import LearnToX from "./components/LearnToX.vue";
 import LearnWatch from "./components/LearnWatch.vue";
+import TestRef from "./components/TestRef.vue";
 </script>
 
 <template>
@@ -12,4 +13,11 @@ import LearnWatch from "./components/LearnWatch.vue";
   <LearnToX />
   <LearnComputed />
   <LearnWatch />
+  <TestRef />
+
+  <hr />
+  <h2>global components</h2>
+  <ComponentA />
+  <ComponentB />
+  <ComponentC />
 </template>
