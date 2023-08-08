@@ -15,6 +15,7 @@ import CustomInputV2 from "./components/CustomInputV2.vue";
 import UserName from "./components/UserName.vue";
 import FancyButton from "./components/FancyButton.vue";
 import BaseLayout from "./components/BaseLayout.vue";
+import { useMouse } from "./hooks";
 
 const post = ref({
   title: "我我我哦我试试棒棒糖",
@@ -30,9 +31,13 @@ const inputValueV2 = ref("GG");
 
 const firstName = ref("first");
 const lastName = ref("last");
+
+const { x, y } = useMouse();
 </script>
 
 <template>
+  <h1>{{ x }}, {{ y }}</h1>
+
   <FirstVue />
   <LearnReactive />
   <LearnToX />
