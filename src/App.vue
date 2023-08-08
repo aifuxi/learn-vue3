@@ -10,6 +10,9 @@ import MyComponent from "./components/MyComponent.vue";
 import TestRef from "./components/TestRef.vue";
 import TestProps from "./components/TestProps.vue";
 import MyButton from "./components/MyButton.vue";
+import CustomInput from "./components/CustomInput.vue";
+import CustomInputV2 from "./components/CustomInputV2.vue";
+import UserName from "./components/UserName.vue";
 
 const post = ref({
   title: "我我我哦我试试棒棒糖",
@@ -18,6 +21,13 @@ const post = ref({
 });
 
 const btnFontSize = ref(1);
+
+const inputValue = ref("1122231");
+
+const inputValueV2 = ref("GG");
+
+const firstName = ref("first");
+const lastName = ref("last");
 </script>
 
 <template>
@@ -44,4 +54,16 @@ const btnFontSize = ref(1);
   <TestProps name="Bob" disabled />
 
   <MyButton :s="btnFontSize" @scale="(s) => (btnFontSize += s)" />
+
+  <CustomInput v-model="inputValue" />
+  <h2>{{ inputValue }}</h2>
+
+  <hr />
+  <CustomInputV2 v-model="inputValueV2" />
+  <h2>{{ inputValueV2 }}</h2>
+
+  <UserName
+    v-model:first-name.capitalize="firstName"
+    v-model:last-name.uppercase="lastName"
+  />
 </template>
