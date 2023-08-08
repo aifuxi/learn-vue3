@@ -13,6 +13,8 @@ import MyButton from "./components/MyButton.vue";
 import CustomInput from "./components/CustomInput.vue";
 import CustomInputV2 from "./components/CustomInputV2.vue";
 import UserName from "./components/UserName.vue";
+import FancyButton from "./components/FancyButton.vue";
+import BaseLayout from "./components/BaseLayout.vue";
 
 const post = ref({
   title: "我我我哦我试试棒棒糖",
@@ -66,4 +68,25 @@ const lastName = ref("last");
     v-model:first-name.capitalize="firstName"
     v-model:last-name.uppercase="lastName"
   />
+
+  <FancyButton>
+    <span>Button span1</span>
+
+    <span>Button span2</span>
+  </FancyButton>
+
+  <FancyButton />
+
+  <BaseLayout>
+    <template #header>
+      <h2>我是HEADER</h2>
+    </template>
+
+    <template #main>
+      <p>我是MAIN</p>
+    </template>
+    <template #footer> 我是FOOTER </template>
+
+    <template #default> 我是默认的DEFAULT </template>
+  </BaseLayout>
 </template>
