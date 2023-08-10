@@ -7,6 +7,7 @@ import UserProfile from "./pages/UserProfile.vue";
 import UserPost from "./pages/UserPost.vue";
 import UserHome from "./pages/UserHome.vue";
 import LongNameRoute from "./pages/LongNameRoute.vue";
+import TestCounterStore from "./pages/TestCounterStore.vue";
 import { LONG_ROUTE_NAME } from "./constants";
 
 const AsyncAbout = () => import("./pages/About.vue");
@@ -57,6 +58,10 @@ export const routes: RouteRecordRaw[] = [
     path: "/looooooooooooooooooooong",
     name: LONG_ROUTE_NAME,
     component: LongNameRoute,
+  },
+  {
+    path: "/test-counter-store",
+    component: TestCounterStore,
   },
   { path: "/:pathMatch(.*)*", name: "NotFound", component: NotFound },
 ];

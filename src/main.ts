@@ -6,6 +6,7 @@ import ComponentA from "./components/GlobalComponent/ComponentA.vue";
 import ComponentB from "./components/GlobalComponent/ComponentB.vue";
 import ComponentC from "./components/GlobalComponent/ComponentC.vue";
 import { routes } from "./routes";
+import { createPinia } from "pinia";
 
 const router = createRouter({
   history: createWebHistory(),
@@ -23,4 +24,8 @@ app
   .component("ComponentC", ComponentC);
 
 app.use(router);
+
+const pinia = createPinia();
+app.use(pinia);
+
 app.mount("#app");
